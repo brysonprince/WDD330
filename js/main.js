@@ -7,8 +7,20 @@ const links = [
     }
   ]
 
-let list = document.querySelector('.list')
+let list = document.getElementsByTagName('ol')
 
-function create_links(){
-    links.forEach(element => console.log(element))
+function createLinks(){
+    newList = "";
+    for (let i = 0; i < list.length; i++){
+        newList += "<li>";
+        newList += "<a href=\"";
+        newList += links[i].url;
+        newList += "\">"
+        newList += links[i].label;
+        newList += "</a>";
+        newList += "</li>";
+    }
+    list.innerHTML = newList;
 }
+
+createLinks()
