@@ -7,3 +7,13 @@ h1 {
   background-color: antiquewhite;
   padding: 1em;
 }
+
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2em;
+  color: blue;
+}
