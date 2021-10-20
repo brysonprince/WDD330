@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo List</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <div>
-    <ol>
+    <div id="list">
+    <ol id="toDoList">
         <li>Get Eggs</li>
         <li>Pickup Dry Cleaning</li>
         <li>Get Gas</li>
     </ol>
     <footer>
-        <p id="numTasks"></p>
+        <p id="numTasks">Num Tasks</p>
         <button>All</button>
         <button>Active</button>
         <button>Completed</button>
     </footer>
+
+    <form>
+      <input type="text">
+      <input type="submit">
+    </form>
     </div>
     
-    <form>
-        <input type="text">
-        <input type="submit">
-    </form>
     <script src="js/main.js"></script>
   </body>
 </html>
