@@ -23,6 +23,7 @@ ToDo List Styles
 */
 html, body {
     height: 95%;
+    background-color: #009688;
 }
 
 #toDoHead {
@@ -40,6 +41,7 @@ html, body {
 #toDoList {
     padding: 0;
     margin: 0 auto;
+    background-color: #fff;
 }
 
 #toDoList li {
@@ -55,6 +57,10 @@ html, body {
 footer button {
     margin-left: auto;
     max-height: 2em;
+    padding: 15px 6px;
+    border: none;
+    width: 25%;
+    height: 100%;
 }
 
 .button {
@@ -67,7 +73,7 @@ footer button {
     overflow: hidden;
     text-decoration: none;
     color: #fff!important;
-    background-color: #009688!important;
+    background-color: #6279B8!important;
     text-align: center;
     cursor: pointer;
     white-space: nowrap
@@ -82,12 +88,15 @@ footer {
     border-left-style: solid;
     border-bottom-style: solid;
     min-height: 2em;
-
+    background-color: #fff;
     display: flex;
 }
 
 footer p {
-    margin: 0;
+  flex-grow: 3;
+  background-color: #fff;
+  margin-left: 2px;
+  font-size: 15px;
 }
 
 form { 
@@ -105,8 +114,23 @@ input[type="text"] {
     border-radius: 50%;
 }
 
-.submit {
-    float: none;
+.filterBox {
+  background-color: #eee;
+  padding: 12px 6px;
+  border: none;
+}
+
+footer .container {
+  padding: 0;
+  line-height: 46px;
+}
+
+input:hover ~ .filterBox {
+  background-color: #ccc;
+}
+
+input:checked ~ .filterBox {
+  background-color: #6279B8!important;
 }
 
 .container {
@@ -117,6 +141,7 @@ input[type="text"] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 40px;
 }
 
 /* Hide the browser's default checkbox */
@@ -148,7 +173,7 @@ input[type="text"] {
 
 /* When the checkbox is checked, add background */
 .container input:checked ~ .checkmark {
-  background-color: #009688!important;
+  background-color: #6279B8!important;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
