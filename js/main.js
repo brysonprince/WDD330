@@ -1,3 +1,5 @@
+import { createToDo } from "./utilities";
+
 const links = [
     {
         label: "Week1",
@@ -23,5 +25,8 @@ function createLinks(){
         ol.appendChild(li);
     }
 }
+
+list = document.getElementById("toDoList");
+list.appendChild(createToDo("Make Dinner"));
 
 createLinks()
