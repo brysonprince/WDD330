@@ -176,6 +176,10 @@ input:checked ~ .filterBox {
   background-color: #6279B8!important;
 }
 
+.checkmark::after label.container {
+  text-decoration: line-through;
+}
+
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
