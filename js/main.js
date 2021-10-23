@@ -1,4 +1,3 @@
-import { createToDo } from "./utilities";
 
 const links = [
     {
@@ -25,8 +24,5 @@ function createLinks(){
         ol.appendChild(li);
     }
 }
-
-list = document.getElementById("toDoList");
-list.appendChild(createToDo("Make Dinner"));
 
 createLinks()
