@@ -1,5 +1,5 @@
 import { getList, saveList } from "./ls.js";
-import { createToDo } from "./utilities.js";
+import { createToDo, addTask } from "./utilities.js";
 import Todo from "./ToDos.js";
 
 let toDoList = [];
@@ -8,13 +8,11 @@ if (getList()) {
     toDoList = getList();
 }
 
-let toDo = new Todo("Pick up groceries");
-toDoList.push(toDo);
+let toDo = new Todo();
+
+document.addEventListener("submit", (e) => {
+    toDo.content = addTask();
+})
 
 let list = document.getElementById("toDoList");
 list.appendChild(createToDo(toDo));
-
-const check = document.getElementById("eggs");
-console.log(check.checked)
-
-saveList(toDoList);

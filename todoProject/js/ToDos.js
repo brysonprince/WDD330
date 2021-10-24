@@ -1,7 +1,11 @@
-export default class toDos {
-    constructor(content) {
+export default class toDo {
+    constructor() {
         this.id = Date.now();
-        this.content = content;
+        this.content = "";
         this.completed = false;
+    }
+
+    addToDo(content) {
+        this.content = content;
     }
 }
