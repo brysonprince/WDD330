@@ -98,6 +98,16 @@
       // const links = Array.from(category.querySelectorAll('a'));
       // 7. sort Exercise
       // Sort the people alphabetically by last name
+      people.sort((personA, personB) => {
+				if (personA > personB) {
+					return -1;
+				}
+				if (personA < personB) {
+					return 1;
+				}
+				return 0;
+			});
+			console.log(people);
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = [

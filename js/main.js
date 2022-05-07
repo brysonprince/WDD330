@@ -32,7 +32,7 @@ const links = [
         label: "ToDo Project",
         url: "todoProject/index.html"
     }
-  ]
+  ];
 
 const ol = document.getElementsByTagName('ol')[0];
 
