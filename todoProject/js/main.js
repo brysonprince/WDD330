@@ -1,18 +1,11 @@
 import { getList, saveList } from "./ls.js";
-import { createToDo, addTask } from "./utilities.js";
-import Todo from "./ToDos.js";
+import { createToDo, addTask, display } from "./utilities.js";
 
-let toDoList = [];
+const toDoList = getList();
+display(toDoList);
 
-if (getList()) {
-    toDoList = getList();
-}
+const form = document.forms['addItem'];
 
-let toDo = new Todo();
+form.addEventListener("submit", addTask, false);
+form.addEventListener('submit', saveList(document.getElementById("toDoList").innerHTML), false);
 
-document.addEventListener("submit", (e) => {
-    toDo.content = addTask();
-})
-
-let list = document.getElementById("toDoList");
-list.appendChild(createToDo(toDo));

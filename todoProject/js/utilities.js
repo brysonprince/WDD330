@@ -1,3 +1,5 @@
+import Todo from "./ToDos.js";
+
 function createToDo(toDo) {
     const listItem = document.createElement("li");
 
@@ -6,9 +8,22 @@ function createToDo(toDo) {
     return listItem;
 }
 
-function addTask() {
-    const form = document.getElementById("addItem")
-    return form.elements[0];
+function addTask(event) {
+    const input = document.forms['addItem']['newToDo'];
+
+    let toDo = new Todo();
+    toDo.addToDo(input.value);
+
+    let list = document.getElementById("toDoList");
+    list.appendChild(createToDo(toDo));
+
+    event.preventDefault();
 }
 
-export {createToDo, addTask}
+function display(toDoList) {
+    document.getElementById('toDoList').innerHTML = toDoList;
+    console.log(toDoList);
+}
+
+
+export {createToDo, addTask, display}
