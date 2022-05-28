@@ -5,7 +5,7 @@ export default class toDo {
         this.completed = false;
     }
 
-    addToDo(content) {
+    setContent(content) {
         this.content = content;
     }
 }
